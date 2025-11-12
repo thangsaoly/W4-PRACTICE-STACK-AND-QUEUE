@@ -73,12 +73,12 @@ string checkBalanced(const string &s)
 
 int main()
 {
-    string s = "()[]{}";
+    // string s = "()[]{}";
     // string s = "([{}])";
     // string s = "([)]";
     // string s = "(((";
     // string s = "()))";
-    // string s = "if(a[0] == '{')";
+    string s = "if(a[0] == '{')";
 
     cout << checkBalanced(s) << endl;
 
