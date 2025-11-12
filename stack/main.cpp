@@ -1,13 +1,3 @@
-// Brief: checkBalanced -- verifies bracket pairing in a string.
-// - Uses a custom Stack<pair<char,int>> to track opening brackets and their positions.
-// - Skips contents of single-quoted character literals (handles escaped characters).
-// - Returns "OK" for balanced input or "ERROR pos=<1-based> reason=<...>" for the first problem.
-//
-// Key ideas:
-//  - Store both the opening bracket and its index so we can report the position of unclosed brackets.
-//  - When encountering a single-quoted literal, advance past the entire literal so any brackets inside
-//    the literal don't affect balancing logic.
-//  - Positions in error messages are 1-based to match typical user-facing indexing.
 #include <iostream>
 #include <string>
 #include <utility>
@@ -94,9 +84,3 @@ int main()
 
     return 0;
 }
-
-// Notes:
-//  - Escaped chars inside single quotes are handled: a backslash skips the next char.
-//  - If a single-quote literal is unterminated, the loop will reach end and remaining opens may be reported.
-//  - Current code does NOT skip double-quoted strings or block comments; add handling if needed.
-//  - Error messages are 1-based positions for user-friendly reporting.

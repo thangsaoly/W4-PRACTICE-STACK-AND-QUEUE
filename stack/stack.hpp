@@ -1,11 +1,3 @@
-// Brief: Simple templated Stack implementation.
-// - Template parameter T: element type stored in the stack.
-// - Internally uses a dynamic array; top index tracks the current top element.
-// - Provides push, pop, peek (inspect top), and empty.
-// Notes:
-//  - pop() and peek() print an error and return default T on underflow; callers must check empty() first.
-//  - Fixed initial buffer (10); no automatic growth and no destructor/copy-safety in this example.
-//  - Suitable for small teaching examples; replace with a robust implementation for production.
 #include <iostream>
 using namespace std;
 
